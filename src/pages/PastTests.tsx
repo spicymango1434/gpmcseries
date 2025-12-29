@@ -106,8 +106,8 @@ export default function PastTests() {
             </p>
             <p className="text-sm text-gray-400">
               For questions about past tests or to report any issues, please contact us at{' '}
-              <a href="mailto:info@gpmo.org" className="text-pink-400 hover:text-pink-300">
-                info@gpmo.org
+              <a href="mailto:gentoopenguin35@gmail.com" className="text-pink-400 hover:text-pink-300">
+                gentoopenguin35@gmail.com
               </a>
             </p>
           </div>
