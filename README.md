@@ -1,1 +1,1 @@
-gpmcseries
+gpmoseries
