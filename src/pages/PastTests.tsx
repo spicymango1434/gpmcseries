@@ -91,14 +91,24 @@ export default function PastTests() {
                         Competition problems and solutions from the {test.season} {test.level} level {test.type.toLowerCase()} round.
                       </p>
                       <div className="flex gap-3">
-                        <button className="flex-1 bg-pink-500 hover:bg-pink-600 text-white font-medium px-4 py-2 rounded-lg transition-colors flex items-center justify-center gap-2">
+                        <a
+                          href="https://drive.google.com/file/d/1aOp5JqrBeooOI-7dBfJPoWLKMzVqgnZO/view?usp=sharing"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="flex-1 bg-pink-500 hover:bg-pink-600 text-white font-medium px-4 py-2 rounded-lg transition-colors flex items-center justify-center gap-2"
+                        >
                           <Download size={18} />
                           Problems
-                        </button>
-                        <button className="flex-1 bg-blue-500 hover:bg-blue-600 text-white font-medium px-4 py-2 rounded-lg transition-colors flex items-center justify-center gap-2">
+                        </a>
+                        <a
+                          href="https://drive.google.com/drive/folders/1-IZ6E0SIRLGNyuTsIfRoTdmBAyZGEYNE"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="flex-1 bg-blue-500 hover:bg-blue-600 text-white font-medium px-4 py-2 rounded-lg transition-colors flex items-center justify-center gap-2"
+                        >
                           <Download size={18} />
                           Solutions
-                        </button>
+                        </a>
                       </div>
                     </div>
                   ))}
