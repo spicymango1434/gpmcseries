@@ -2,13 +2,11 @@ import { Menu, X, Moon, Sun } from 'lucide-react';
 import { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { useTheme } from '../context/ThemeContext';
-import { useAuth } from '../context/AuthContext';
 
 export default function Navigation() {
   const [isOpen, setIsOpen] = useState(false);
   const location = useLocation();
   const { isDark, toggleTheme } = useTheme();
-  const { user, signOut } = useAuth();
 
   const isActive = (path: string) => location.pathname === path;
   const bgClass = isDark ? 'bg-gray-900' : 'bg-white';
@@ -52,36 +50,16 @@ export default function Navigation() {
             </Link>
           </div>
 
-          <div className="hidden md:flex items-center space-x-4">
-            <button
-              onClick={toggleTheme}
-              className={`p-2 rounded-lg transition-colors ${
-                isDark
-                  ? 'bg-gray-800 hover:bg-gray-700 text-yellow-400'
-                  : 'bg-gray-100 hover:bg-gray-200 text-gray-700'
-              }`}
-            >
-              {isDark ? <Sun size={20} /> : <Moon size={20} />}
-            </button>
-            {user ? (
-              <div className="flex items-center gap-4">
-                <span className={`text-sm ${textClass}`}>{user.email}</span>
-                <button
-                  onClick={signOut}
-                  className="px-4 py-2 bg-pink-500 hover:bg-pink-600 text-white rounded-lg text-sm font-medium transition-colors"
-                >
-                  Sign Out
-                </button>
-              </div>
-            ) : (
-              <Link
-                to="/login"
-                className="px-4 py-2 bg-pink-500 hover:bg-pink-600 text-white rounded-lg text-sm font-medium transition-colors"
-              >
-                Login
-              </Link>
-            )}
-          </div>
+          <button
+            onClick={toggleTheme}
+            className={`p-2 rounded-lg transition-colors ${
+              isDark
+                ? 'bg-gray-800 hover:bg-gray-700 text-yellow-400'
+                : 'bg-gray-100 hover:bg-gray-200 text-gray-700'
+            }`}
+          >
+            {isDark ? <Sun size={20} /> : <Moon size={20} />}
+          </button>
 
           <div className="md:hidden flex items-center space-x-2">
             <button
@@ -140,30 +118,6 @@ export default function Navigation() {
             >
               Past Tests
             </Link>
-            <div className="px-3 py-4 border-t border-gray-600">
-              {user ? (
-                <div className="space-y-3">
-                  <div className={`text-sm ${textClass}`}>{user.email}</div>
-                  <button
-                    onClick={() => {
-                      signOut();
-                      setIsOpen(false);
-                    }}
-                    className="w-full px-4 py-2 bg-pink-500 hover:bg-pink-600 text-white rounded-lg text-sm font-medium transition-colors"
-                  >
-                    Sign Out
-                  </button>
-                </div>
-              ) : (
-                <Link
-                  to="/login"
-                  onClick={() => setIsOpen(false)}
-                  className="block w-full px-4 py-2 bg-pink-500 hover:bg-pink-600 text-white rounded-lg text-sm font-medium transition-colors text-center"
-                >
-                  Login
-                </Link>
-              )}
-            </div>
           </div>
         </div>
       )}
