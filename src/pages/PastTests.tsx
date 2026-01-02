@@ -7,6 +7,8 @@ interface Test {
   season: string;
   level: string;
   type: string;
+  problem_url: string;
+  solution_url: string;
 }
 
 export default function PastTests() {
@@ -17,8 +19,24 @@ export default function PastTests() {
   const mutedTextClass = isDark ? 'text-gray-400' : 'text-gray-600';
 
   const tests: Test[] = [
-    { id: '1', year: 2025, season: 'GPMC 10', level: 'AMC 10', type: 'Individual' },
-    { id: '2', year: 2025, season: 'GPMC 12', level: 'AMC 12', type: 'Individual' },
+    {
+      id: '1',
+      year: 2025,
+      season: 'GPMC 10',
+      level: 'AMC 10',
+      type: 'Individual',
+      problem_url: 'https://drive.google.com/file/d/1aOp5JqrBeooOI-7dBfJPoWLKMzVqgnZO/view?usp=sharing',
+      solution_url: 'https://drive.google.com/drive/folders/1-IZ6E0SIRLGNyuTsIfRoTdmBAyZGEYNE'
+    },
+    {
+      id: '2',
+      year: 2025,
+      season: 'GPMC 12',
+      level: 'AMC 12',
+      type: 'Individual',
+      problem_url: 'https://drive.google.com/file/d/1jbY1aj3ieseqwaxJY8jgkLnKQ4qaAu8b/view?usp=sharing',
+      solution_url: 'https://drive.google.com/file/d/1B2isLgSH2xyehQRLyGrHlE2cFj6i9LtJ/view?usp=sharing'
+    },
   ];
 
   const groupedTests = tests.reduce((acc, test) => {
@@ -92,7 +110,7 @@ export default function PastTests() {
                       </p>
                       <div className="flex gap-3">
                         <a
-                          href="https://drive.google.com/file/d/1aOp5JqrBeooOI-7dBfJPoWLKMzVqgnZO/view?usp=sharing"
+                          href={test.problem_url}
                           target="_blank"
                           rel="noopener noreferrer"
                           className="flex-1 bg-pink-500 hover:bg-pink-600 text-white font-medium px-4 py-2 rounded-lg transition-colors flex items-center justify-center gap-2"
@@ -101,7 +119,7 @@ export default function PastTests() {
                           Problems
                         </a>
                         <a
-                          href="https://drive.google.com/drive/folders/1-IZ6E0SIRLGNyuTsIfRoTdmBAyZGEYNE"
+                          href={test.solution_url}
                           target="_blank"
                           rel="noopener noreferrer"
                           className="flex-1 bg-blue-500 hover:bg-blue-600 text-white font-medium px-4 py-2 rounded-lg transition-colors flex items-center justify-center gap-2"
