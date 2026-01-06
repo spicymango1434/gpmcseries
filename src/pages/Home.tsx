@@ -1,4 +1,4 @@
-import { Calendar, Trophy, Users, BookOpen, ArrowRight } from 'lucide-react';
+import { Calendar, Trophy, Users, ArrowRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { useTheme } from '../context/ThemeContext';
 
@@ -110,51 +110,6 @@ export default function Home() {
               <div className={`text-xl ${textClass} mb-2`}>Years</div>
               <p className={mutedTextClass}>Of mathematical excellence</p>
             </div>
-          </div>
-        </div>
-      </section>
-
-      <section className={`py-16 px-4 ${isDark ? 'bg-gray-800' : 'bg-gray-100'}`}>
-        <div className="max-w-7xl mx-auto">
-          <h2 className="text-4xl font-bold text-center mb-12">
-            <span className="bg-gradient-to-r from-pink-500 to-blue-500 bg-clip-text text-transparent">
-              GPMO 10 Resources
-            </span>
-          </h2>
-          <div className="grid md:grid-cols-2 gap-8 max-w-3xl mx-auto">
-            <a
-              href="https://drive.google.com/file/d/1aOp5JqrBeooOI-7dBfJPoWLKMzVqgnZO/view?usp=sharing"
-              target="_blank"
-              rel="noopener noreferrer"
-              className={`${cardBgClass} p-8 rounded-lg border ${borderClass} ${borderHoverClass} transition-all cursor-pointer hover:shadow-lg`}
-            >
-              <div className="text-center">
-                <div className="bg-gradient-to-br from-pink-500 to-pink-600 w-16 h-16 rounded-lg flex items-center justify-center mb-4 mx-auto">
-                  <BookOpen className="text-white" size={32} />
-                </div>
-                <h3 className={`text-2xl font-semibold ${textClass} mb-2`}>GPMO 10 Test</h3>
-                <p className={mutedTextClass}>
-                  Access the latest competition test paper
-                </p>
-              </div>
-            </a>
-
-            <a
-              href="https://drive.google.com/drive/folders/1-IZ6E0SIRLGNyuTsIfRoTdmBAyZGEYNE"
-              target="_blank"
-              rel="noopener noreferrer"
-              className={`${cardBgClass} p-8 rounded-lg border ${isDark ? 'border-blue-500/20' : 'border-blue-200'} ${isDark ? 'hover:border-blue-500/50' : 'hover:border-blue-400'} transition-all cursor-pointer hover:shadow-lg`}
-            >
-              <div className="text-center">
-                <div className="bg-gradient-to-br from-blue-500 to-blue-600 w-16 h-16 rounded-lg flex items-center justify-center mb-4 mx-auto">
-                  <Trophy className="text-white" size={32} />
-                </div>
-                <h3 className={`text-2xl font-semibold ${textClass} mb-2`}>Solutions</h3>
-                <p className={mutedTextClass}>
-                  View detailed solutions and explanations
-                </p>
-              </div>
-            </a>
           </div>
         </div>
       </section>
