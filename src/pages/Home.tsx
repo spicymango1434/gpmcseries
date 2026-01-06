@@ -114,7 +114,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className={`py-16 px-4 bg-gradient-to-br ${isDark ? 'from-blue-900 to-gray-900' : 'from-blue-100 to-gray-100'}`}>
+      <section className={`py-16 px-4 ${isDark ? 'bg-gray-800' : 'bg-gray-100'}`}>
         <div className="max-w-4xl mx-auto text-center">
           <h2 className={`text-3xl md:text-4xl font-bold ${textClass} mb-6`}>
             Ready to Challenge Yourself?
