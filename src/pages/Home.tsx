@@ -1,4 +1,4 @@
-import { Calendar, Trophy, Users, ArrowRight } from 'lucide-react';
+import { Calendar, Trophy, Users, ArrowRight, BookOpen } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { useTheme } from '../context/ThemeContext';
 
@@ -43,7 +43,7 @@ export default function Home() {
 
       <section className={`py-16 px-4 ${isDark ? 'bg-gray-800' : 'bg-gray-100'}`}>
         <div className="max-w-7xl mx-auto">
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             <div className={`${cardBgClass} p-6 rounded-lg border ${borderClass} ${borderHoverClass} transition-colors`}>
               <div className="bg-gradient-to-br from-pink-500 to-pink-600 w-12 h-12 rounded-lg flex items-center justify-center mb-4">
                 <Trophy className="text-white" size={24} />
@@ -64,17 +64,7 @@ export default function Home() {
               </p>
             </div>
 
-            <a href="https://drive.google.com/drive/folders/1-IZ6E0SIRLGNyuTsIfRoTdmBAyZGEYNE" target="_blank" rel="noopener noreferrer" className={`${cardBgClass} p-6 rounded-lg border ${borderClass} ${borderHoverClass} transition-colors cursor-pointer`}>
-              <div className="bg-gradient-to-br from-pink-500 to-pink-600 w-12 h-12 rounded-lg flex items-center justify-center mb-4">
-                <BookOpen className="text-white" size={24} />
-              </div>
-              <h3 className={`text-xl font-semibold ${textClass} mb-2`}>Resources</h3>
-              <p className={mutedTextClass}>
-                Access past tests, solutions, and practice problems to sharpen your mathematical skills
-              </p>
-            </a>
-
-            <div className={`${cardBgClass} p-6 rounded-lg border ${isDark ? 'border-blue-500/20' : 'border-blue-200'} ${isDark ? 'hover:border-blue-500/50' : 'hover:border-blue-400'} transition-colors`}>
+<div className={`${cardBgClass} p-6 rounded-lg border ${isDark ? 'border-blue-500/20' : 'border-blue-200'} ${isDark ? 'hover:border-blue-500/50' : 'hover:border-blue-400'} transition-colors`}>
               <div className="bg-gradient-to-br from-blue-500 to-blue-600 w-12 h-12 rounded-lg flex items-center justify-center mb-4">
                 <Calendar className="text-white" size={24} />
               </div>
