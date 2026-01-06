@@ -4,6 +4,7 @@ import { AuthProvider } from './context/AuthContext';
 import Navigation from './components/Navigation';
 import Home from './pages/Home';
 import About from './pages/About';
+import Writers from './pages/Writers';
 import PastTests from './pages/PastTests';
 import Login from './pages/Login';
 import TakeTest from './pages/TakeTest';
@@ -15,6 +16,7 @@ function AppContent() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
+        <Route path="/writers" element={<Writers />} />
         <Route path="/past-tests" element={<PastTests />} />
         <Route path="/login" element={<Login />} />
         <Route path="/take-test/:testId" element={<TakeTest />} />

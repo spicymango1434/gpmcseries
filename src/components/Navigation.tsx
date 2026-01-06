@@ -41,6 +41,14 @@ export default function Navigation() {
               About
             </Link>
             <Link
+              to="/writers"
+              className={`px-3 py-2 rounded-md text-sm font-medium transition-colors ${
+                isActive('/writers') ? activeClass : `${textClass} hover:${activeClass}`
+              }`}
+            >
+              Team
+            </Link>
+            <Link
               to="/past-tests"
               className={`px-3 py-2 rounded-md text-sm font-medium transition-colors ${
                 isActive('/past-tests') ? activeClass : `${textClass} hover:${activeClass}`
@@ -106,6 +114,17 @@ export default function Navigation() {
               }`}
             >
               About
+            </Link>
+            <Link
+              to="/writers"
+              onClick={() => setIsOpen(false)}
+              className={`block px-3 py-2 rounded-md text-base font-medium transition-colors ${
+                isActive('/writers')
+                  ? `${activeClass} ${isDark ? 'bg-gray-700' : 'bg-gray-100'}`
+                  : `${textClass} hover:${activeClass} ${isDark ? 'hover:bg-gray-700' : 'hover:bg-gray-100'}`
+              }`}
+            >
+              Team
             </Link>
             <Link
               to="/past-tests"

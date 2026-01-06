@@ -109,6 +109,16 @@ export default function About() {
               </div>
             </div>
           </div>
+
+          <div className={`${cardBgClass} rounded-lg p-8 border ${isDark ? 'border-pink-500/20' : 'border-pink-200'}`}>
+            <h2 className={`text-3xl font-bold ${textClass} mb-6`}>Our Team</h2>
+            <p className={`${mutedTextClass} text-lg mb-6`}>
+              GPMO is led by a dedicated team of passionate mathematicians and educators committed to fostering mathematical excellence. Our team includes mathkiddus, Inferno2332, Kempu33334, NamelyOrange, and lele0305, who work together to create engaging competitions and resources for our community.
+            </p>
+            <p className={`${mutedTextClass} text-lg`}>
+              <a href="/writers" className="text-pink-500 hover:text-pink-600 font-semibold">Learn more about our team members</a>
+            </p>
+          </div>
         </div>
       </section>
     </div>
